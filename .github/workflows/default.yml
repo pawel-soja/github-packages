@@ -9,5 +9,10 @@ jobs:
       - name: Get Sources
         uses: actions/checkout@v2
 
+      - name: Install Requisites
+        run: |
+          apt-get update
+          apt-get install -y fakeroot cdbs dh-make cmake build-essential
+
       - name: Build Packages
         run: ./build-packages.sh
