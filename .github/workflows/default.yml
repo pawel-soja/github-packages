@@ -11,8 +11,8 @@ jobs:
 
       - name: Install Requisites
         run: |
-          apt-get update
-          apt-get install -y fakeroot cdbs dh-make cmake build-essential
+          sudo apt-get update
+          sudo apt-get install -y fakeroot cdbs dh-make cmake build-essential
 
       - name: Build Packages
         run: ./build-packages.sh
