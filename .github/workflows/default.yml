@@ -14,6 +14,7 @@ jobs:
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
           echo "$GPG_PRIVATE_KEY" | gpg --import
+          export DEB_SIGN_KEYID=6D001E7B8B0F585699DCEF658896C9EF9A7B7CA0
 
       - name: Install Requisites
         run: |
@@ -27,4 +28,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: github-packages_1.0.0_amd64
-          path: build/github-packages_1.0.0_amd64.deb
+          path: build/*
