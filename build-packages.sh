@@ -4,7 +4,7 @@ set -e
 
 rm -rf build
 mkdir -p build/package
-cp -a ./ build/package
+cp -a ./ build/package || true
 pushd build/package
 fakeroot debian/rules binary
 popd
