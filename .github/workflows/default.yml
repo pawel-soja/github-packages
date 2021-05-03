@@ -9,6 +9,12 @@ jobs:
       - name: Get Sources
         uses: actions/checkout@v2
 
+      - name: Install GPG Key
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          echo "$GPG_PRIVATE_KEY" | gpg --import
+
       - name: Install Requisites
         run: |
           sudo apt-get update
