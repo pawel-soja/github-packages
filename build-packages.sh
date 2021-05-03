@@ -4,7 +4,6 @@ set -e
 
 gpg --list-keys
 
-exit
 rm -rf build
 mkdir -p build/package
 cp -a ./ build/package || true
