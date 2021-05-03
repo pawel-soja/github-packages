@@ -1,0 +1,13 @@
+name: Linux
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get Sources
+        uses: actions/checkout@v2
+
+      - name: Build Packages
+        run: ./build-packages.sh

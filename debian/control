@@ -1,0 +1,12 @@
+Source: github-packages
+Section: misc
+Priority: optional
+Maintainer: Pawel Soja <kernel32.pl@gmail.com>
+Standards-Version: 3.9.5
+Vcs-Git: git://github.com/pawel-soja/github-packages.git
+
+Package: github-packages
+Section: misc
+Architecture: any
+Multi-Arch: same
+Description: Example
